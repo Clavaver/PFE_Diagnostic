@@ -17,14 +17,17 @@ export class FieldComponent implements OnInit {
   }
 
   add(){
+      if(this.diagnostic != ""){
     this.diags.push(this.diagnostic)
     this.diagnostic = "";
+      }
   }
 
   remove(index :number){
-    this.diags.splice(index,1)
-    
+    if (confirm( "Êtes-vous sûr(e) de vouloir supprimer ce diagnostic ?")) {
+      this.diags.splice(index,1)
+      } else{
+      }
   }
-
 
 }

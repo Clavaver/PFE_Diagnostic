@@ -1,7 +1,7 @@
 
 
 <mat-list role="list" *ngFor= "let diag of diags, let index = index" >
-  <mat-list-item role="listitem" >
+  <mat-list-item role="listitem">
     {{diag}}<mat-icon (click)="remove(index)">delete</mat-icon></mat-list-item>
 </mat-list>
 
